@@ -1,5 +1,7 @@
 //import 'dart:nativewrappers/_internal/vm/lib/core_patch.dart';
 
+import 'dart:async';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +19,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
      // title: 'Flutter Demo',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple.shade900),
         useMaterial3: true,
       ),
@@ -44,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       var result = "";
       var cr=Colors.blue.shade500;
       var msg="";
-      var ic=FaIcon(FontAwesomeIcons.faceSmile,size: 50,);
+      var ic=FaIcon(FontAwesomeIcons.faceSmile,size: 50,color: Colors.grey.shade300,);
   @override
   Widget build(BuildContext context) {
 
@@ -65,10 +66,11 @@ class _MyHomePageState extends State<MyHomePage> {
          child:SingleChildScrollView(
            scrollDirection: Axis.vertical,
            child: Container(
+
              width: 350,
              decoration: BoxDecoration(
                borderRadius: BorderRadius.circular(10),
-               color: Colors.blue.shade50,
+               color: Colors.grey.shade300,
                  boxShadow: [
                   BoxShadow(
                     spreadRadius: 3,
@@ -126,7 +128,11 @@ class _MyHomePageState extends State<MyHomePage> {
                    SizedBox(height: 15,),
                    ElevatedButton(
                        style: ElevatedButton.styleFrom(
-                         backgroundColor: Colors.blue
+                         backgroundColor: Colors.blue,
+                         foregroundColor: Colors.white70,
+                         textStyle: TextStyle(
+                           fontWeight: FontWeight.bold
+                         )
                        ),
                        onPressed: (){
                      var wtv=wt.text.toString();
@@ -175,9 +181,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               });
                             });
                      }else {
-           
+                       result='Please enter value';
+
                        setState(() {
-                         result='Please enter value';
+
                        });
                      }
            
