@@ -2,10 +2,12 @@
 
 import 'dart:async';
 
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main()async {
+
   runApp(const MyApp());
 }
 
@@ -150,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             if(bmi>25){
                               msg="Overwaight";
                               cr=Colors.orange;
-                             ic= FaIcon(FontAwesomeIcons.faceSadCry,color: Colors.green,size: 100,);
+                             ic= FaIcon(FontAwesomeIcons.faceSadCry,color: Colors.orange,size: 50,);
 
 
                             }
